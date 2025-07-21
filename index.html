@@ -81,6 +81,54 @@
       margin: 0 auto;
     }
 
+    .images {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .images img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .appointment-form {
+      margin-top: 40px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    form input, form textarea {
+      background: #1f1f1f;
+      color: #f5f5f5;
+    }
+
+    form button {
+      background-color: #b8860b;
+      color: #1a1a1a;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     footer {
       background-color: #262626;
       color: #999;
@@ -100,6 +148,7 @@
     <a href="#lessons">Lessons</a>
     <a href="#production">Production</a>
     <a href="#contact">Contact</a>
+    <a href="#appointment">Book</a>
   </nav>
 
   <section class="hero">
@@ -110,6 +159,11 @@
   <section class="section" id="lessons">
     <h3>Guitar Lessons for All Ages</h3>
     <p>Tailored one-on-one sessions, in-person or virtual. My approach is hands-on, encouraging creativity while building technique and confidence.</p>
+    <div class="images">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Guitars.jpg" alt="Guitar">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Grand_piano.jpg" alt="Piano">
+      <img src="your-custom-image.jpg" alt="Your Custom Image">
+    </div>
   </section>
 
   <section class="section" id="production">
@@ -119,11 +173,24 @@
 
   <section class="section" id="contact">
     <h3>Start Your Journey</h3>
-    <p>Email me at <a href="briggsnewtonmusic@gmail.com" style="color:#b8860b;">info@newtunestudio.com</a> to book a free consultation or your first lesson.</p>
+    <p>Email me at <a href="mailto:briggs.newton@newtunestdio.com" style="color:#b8860b;">briggs.newton@newtunestdio.com</a> to book a free consultation or your first lesson.</p>
+  </section>
+
+  <section class="section" id="appointment">
+    <h3>Set an Appointment</h3>
+    <div class="appointment-form">
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Lesson Type or Inquiry" />
+        <textarea name="message" placeholder="Your Message or Availability" rows="4"></textarea>
+        <button type="submit">Send Appointment Request</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 NewTune Studio. All rights reserved.
+    &copy; 2025 NewTune Studio. All Rights Reserved. 
   </footer>
 </body>
 </html>
