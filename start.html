@@ -97,7 +97,7 @@
 </head>
 <body>
   <h1>Start Your Guitar Journey</h1>
-  <form action="https://formspree.io/f/mnqegzgr" method="POST" onsubmit="showConfirmation(); return false;">
+  <form id="guitarForm">
     <label for="name">Your Full Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -143,17 +143,34 @@
 
   <div class="confirmation" id="confirmation">
     <h2>Thank You!</h2>
-    <p>Your information has been received. I’ll be reaching out shortly to set up your first lesson and share availability. Let’s get playing!</p>
+    <p>Your information has been received and sent to <strong>briggs.newton@newtunestudio.com</strong>. You will now be redirected back to the homepage.</p>
   </div>
 
   <script>
-    function showConfirmation() {
-      const form = document.querySelector("form");
-      const confirmation = document.getElementById("confirmation");
+    const form = document.getElementById("guitarForm");
+    const confirmation = document.getElementById("confirmation");
 
-      form.style.display = "none";
-      confirmation.style.display = "block";
-    }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Send form data via Formspree
+      const formData = new FormData(form);
+      fetch("https://formspree.io/f/mnqegzgr", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        form.style.display = "none";
+        confirmation.style.display = "block";
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 4000);
+      }).catch(error => {
+        alert("There was an error submitting the form. Please try again.");
+      });
+    });
   </script>
 </body>
 </html>
