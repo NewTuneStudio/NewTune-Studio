@@ -14,24 +14,29 @@
 
     body {
       font-family: 'Cinzel', serif;
-      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+      background: linear-gradient(135deg, #1a1a1a, #2c1e12);
       color: #f5f5f5;
       padding: 40px 20px;
+      background-image: url('https://images.unsplash.com/photo-1526150641602-3b27e4a7f3f7');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
     h1 {
       text-align: center;
       color: #e0c097;
       margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #000;
     }
 
     form {
       max-width: 700px;
       margin: 0 auto;
-      background-color: #181818;
+      background-color: rgba(24, 24, 24, 0.95);
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     }
 
     label {
@@ -68,11 +73,31 @@
     button:hover {
       background-color: #bfa066;
     }
+
+    .confirmation {
+      display: none;
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: rgba(24, 24, 24, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .confirmation h2 {
+      color: #e0c097;
+      margin-bottom: 20px;
+    }
+
+    .confirmation p {
+      color: #ddd;
+    }
   </style>
 </head>
 <body>
   <h1>Start Your Guitar Journey</h1>
-  <form action="https://formspree.io/f/mnqegzgr" method="POST">
+  <form action="https://formspree.io/f/mnqegzgr" method="POST" onsubmit="showConfirmation(); return false;">
     <label for="name">Your Full Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -115,5 +140,20 @@
 
     <button type="submit">Submit</button>
   </form>
+
+  <div class="confirmation" id="confirmation">
+    <h2>Thank You!</h2>
+    <p>Your information has been received. I’ll be reaching out shortly to set up your first lesson and share availability. Let’s get playing!</p>
+  </div>
+
+  <script>
+    function showConfirmation() {
+      const form = document.querySelector("form");
+      const confirmation = document.getElementById("confirmation");
+
+      form.style.display = "none";
+      confirmation.style.display = "block";
+    }
+  </script>
 </body>
 </html>
