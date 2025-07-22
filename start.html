@@ -14,13 +14,9 @@
 
     body {
       font-family: 'Cinzel', serif;
-      background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%);
+      background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
       color: #f5f5f5;
       padding: 40px 20px;
-      background-image: url('https://images.unsplash.com/photo-1549921296-3a6b53b1d5a1');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
     }
 
     h1 {
@@ -33,7 +29,7 @@
     form {
       max-width: 700px;
       margin: 0 auto;
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(34, 34, 34, 0.95);
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
@@ -72,26 +68,6 @@
 
     button:hover {
       background-color: #e1b871;
-    }
-
-    .confirmation {
-      display: none;
-      max-width: 700px;
-      margin: 40px auto;
-      background-color: rgba(0, 0, 0, 0.85);
-      padding: 30px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-    }
-
-    .confirmation h2 {
-      color: #e0c097;
-      margin-bottom: 20px;
-    }
-
-    .confirmation p {
-      color: #ddd;
     }
   </style>
 </head>
@@ -141,14 +117,8 @@
     <button type="submit">Submit</button>
   </form>
 
-  <div class="confirmation" id="confirmation">
-    <h2>Thank You!</h2>
-    <p>Your information has been received and sent to <strong>briggs.newton@newtunestudio.com</strong>. You will now be redirected back to the homepage.</p>
-  </div>
-
   <script>
     const form = document.getElementById("guitarForm");
-    const confirmation = document.getElementById("confirmation");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -161,11 +131,7 @@
           'Accept': 'application/json'
         }
       }).then(response => {
-        form.style.display = "none";
-        confirmation.style.display = "block";
-        setTimeout(() => {
-          window.location.href = "index.html";
-        }, 4000);
+        window.location.href = "confirmation.html";
       }).catch(error => {
         alert("There was an error submitting the form. Please try again.");
       });
