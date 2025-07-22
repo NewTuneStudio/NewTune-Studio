@@ -14,10 +14,10 @@
 
     body {
       font-family: 'Cinzel', serif;
-      background: linear-gradient(135deg, #1a1a1a, #2c1e12);
+      background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%);
       color: #f5f5f5;
       padding: 40px 20px;
-      background-image: url('https://images.unsplash.com/photo-1526150641602-3b27e4a7f3f7');
+      background-image: url('https://images.unsplash.com/photo-1549921296-3a6b53b1d5a1');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -27,62 +27,62 @@
       text-align: center;
       color: #e0c097;
       margin-bottom: 30px;
-      text-shadow: 1px 1px 2px #000;
+      text-shadow: 2px 2px 6px #000;
     }
 
     form {
       max-width: 700px;
       margin: 0 auto;
-      background-color: rgba(24, 24, 24, 0.95);
+      background-color: rgba(0, 0, 0, 0.85);
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
     }
 
     label {
       display: block;
       margin-bottom: 10px;
       font-weight: 700;
-      color: #d5b87d;
+      color: #e7c888;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 25px;
       border: none;
-      border-radius: 5px;
-      background-color: #2a2a2a;
+      border-radius: 6px;
+      background-color: #2d2d2d;
       color: #fff;
       font-size: 1rem;
     }
 
     button {
-      background-color: #94794b;
+      background-color: #c19b5c;
       border: none;
-      padding: 12px 25px;
+      padding: 14px 30px;
       font-size: 1rem;
       color: #fff;
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 10px;
       transition: background-color 0.3s ease;
       display: block;
       margin: 0 auto;
     }
 
     button:hover {
-      background-color: #bfa066;
+      background-color: #e1b871;
     }
 
     .confirmation {
       display: none;
       max-width: 700px;
       margin: 40px auto;
-      background-color: rgba(24, 24, 24, 0.95);
+      background-color: rgba(0, 0, 0, 0.85);
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 16px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
     }
 
     .confirmation h2 {
@@ -153,7 +153,6 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Send form data via Formspree
       const formData = new FormData(form);
       fetch("https://formspree.io/f/mnqegzgr", {
         method: "POST",
