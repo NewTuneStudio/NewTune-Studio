@@ -6,110 +6,114 @@
   <title>Start Your Journey - NewTune Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #121212;
-      color: #f5f5f5;
       font-family: 'Cinzel', serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
+      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+      color: #f5f5f5;
+      padding: 40px 20px;
     }
-    h2 {
-      margin-bottom: 20px;
+
+    h1 {
+      text-align: center;
       color: #e0c097;
+      margin-bottom: 30px;
     }
-    .question-box {
-      background: #1e1e1e;
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #181818;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
     }
-    .question-box input, .question-box select, .question-box button {
-      margin-top: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #d5b87d;
+    }
+
+    input, select, textarea {
       width: 100%;
-      padding: 12px;
-      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 25px;
       border: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: #fff;
       font-size: 1rem;
     }
+
     button {
       background-color: #94794b;
-      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      color: #fff;
       cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
     }
+
     button:hover {
       background-color: #bfa066;
     }
   </style>
 </head>
 <body>
-  <h2>Start Your Guitar Journey</h2>
-  <div class="question-box" id="formContainer">
-    <!-- Questions will be injected here by JavaScript -->
-  </div>
+  <h1>Start Your Guitar Journey</h1>
+  <form action="https://formspree.io/f/mnqegzgr" method="POST">
+    <label for="name">Your Full Name:</label>
+    <input type="text" id="name" name="name" required>
 
-  <script>
-    const questions = [
-      "What's your full name?",
-      "What's your email address?",
-      "What's your phone number?",
-      "What guitar style are you interested in? (Acoustic or Electric)",
-      "Have you ever played guitar before?",
-      "Can you currently play any chords or songs?",
-      "What song or style would you love to learn first?",
-      "Do you have your own guitar?"
-    ];
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
 
-    const formData = [];
-    let current = 0;
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
 
-    function renderQuestion() {
-      const container = document.getElementById("formContainer");
-      container.innerHTML = "";
+    <label for="guitarType">Which guitar do you want to learn?</label>
+    <select id="guitarType" name="guitarType">
+      <option value="acoustic">Acoustic</option>
+      <option value="electric">Electric</option>
+      <option value="both">Both</option>
+    </select>
 
-      const questionText = document.createElement("p");
-      questionText.textContent = questions[current];
-      container.appendChild(questionText);
+    <label for="experience">How would you describe your current skill level?</label>
+    <select id="experience" name="experience">
+      <option value="beginner">Total Beginner</option>
+      <option value="basic">Know a few chords</option>
+      <option value="intermediate">Can play songs</option>
+      <option value="advanced">Advanced</option>
+    </select>
 
-      const input = document.createElement(
-        current === 3 ? "select" : "input"
-      );
+    <label for="goals">What are your goals for guitar lessons?</label>
+    <textarea id="goals" name="goals" rows="3" placeholder="e.g., Play songs I love, write my own music..."></textarea>
 
-      if (current === 3) {
-        input.innerHTML = `
-          <option value="">Select one</option>
-          <option value="Acoustic">Acoustic</option>
-          <option value="Electric">Electric</option>
-        `;
-      } else {
-        input.type = "text";
-      }
+    <label for="recording">Are you interested in recording your playing or creating original songs?</label>
+    <select id="recording" name="recording">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="maybe">Maybe</option>
+    </select>
 
-      container.appendChild(input);
+    <label for="style">What genres or artists do you love?</label>
+    <textarea id="style" name="style" rows="2"></textarea>
 
-      const nextBtn = document.createElement("button");
-      nextBtn.textContent = current === questions.length - 1 ? "Submit" : "Next";
-      nextBtn.onclick = () => {
-        formData.push(input.value);
-        if (current < questions.length - 1) {
-          current++;
-          renderQuestion();
-        } else {
-          // Final submission
-          const finalInfo = questions.map((q, i) => `${q}: ${formData[i]}`).join("\n");
-          alert("Thank you! Here's what you submitted:\n\n" + finalInfo);
-        }
-      };
+    <label for="days">Preferred days/times for lessons?</label>
+    <textarea id="days" name="days" rows="2"></textarea>
 
-      container.appendChild(nextBtn);
-    }
-
-    renderQuestion();
-  </script>
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
