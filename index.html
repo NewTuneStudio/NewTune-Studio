@@ -23,12 +23,27 @@
       padding: 30px 20px;
       text-align: center;
       border-bottom: 3px solid #94794b;
+      position: relative;
     }
 
     header h1 {
       font-size: 3rem;
       color: #e0c097;
       letter-spacing: 2px;
+    }
+
+    .logo-left, .logo-right {
+      position: absolute;
+      top: 15px;
+      height: 50px;
+    }
+
+    .logo-left {
+      left: 15px;
+    }
+
+    .logo-right {
+      right: 15px;
     }
 
     nav {
@@ -104,7 +119,9 @@
 </head>
 <body>
   <header>
+    <img src="your-logo-left.png" alt="Logo Left" class="logo-left">
     <h1>NewTune Studio</h1>
+    <img src="your-logo-right.png" alt="Logo Right" class="logo-right">
   </header>
 
   <nav>
