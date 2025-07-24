@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music - NewTune Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cinzel', serif;
+      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #0e0e0e;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 3px solid #94794b;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #e0c097;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: #e0c097;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .music-section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .music-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #e0c097;
+    }
+
+    .music-section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #0e0e0e;
+      color: #999;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NewTune Studio</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="book.html">Book Now</a>
+    <a href="ogden.html">Ogden Lessons</a>
+    <a href="music.html">Music</a>
+    <a href="about.html">About Me</a>
+  </nav>
+
+  <section class="music-section">
+    <h2>Check Out My Music</h2>
+    <p>Check out my 2 songs I have currently out on all platforms, performed and produced by me — "Slow" and "Bleeding Like You". I take pride in my work, and every note reflects my style and passion. More songs are on the way!</p>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Kw5cdvpLvxo" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/B3ws7bzy-Ac" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 NewTune Studio. All Rights Reserved.
+  </footer>
+</body>
+</html>
