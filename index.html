@@ -18,34 +18,16 @@
       color: #f5f5f5;
     }
 
-    header {
-      background-color: #0e0e0e;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 3px solid #94794b;
-      position: relative;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: #e0c097;
-      letter-spacing: 2px;
-    }
-
-    .logo-left {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      height: 50px;
-    }
-
     nav {
-      background-color: #121212;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
       display: flex;
       justify-content: center;
       gap: 30px;
-      padding: 15px 0;
-      border-bottom: 1px solid #333;
+      padding: 20px 0;
+      z-index: 10;
     }
 
     nav a {
@@ -53,23 +35,39 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 1rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     .dashboard {
       padding: 60px 20px;
-      text-align: center;
       background: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d') no-repeat center center/cover;
-      min-height: 80vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      flex-direction: row;
       background-blend-mode: overlay;
       background-color: rgba(0,0,0,0.7);
+      gap: 60px;
+      padding-top: 100px;
+      flex-wrap: wrap;
+    }
+
+    .dashboard img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .dashboard-content {
+      max-width: 600px;
     }
 
     .dashboard h2 {
@@ -79,10 +77,10 @@
     }
 
     .dashboard p {
-      max-width: 700px;
       font-size: 1.1rem;
       color: #ddd;
       margin-bottom: 30px;
+      line-height: 1.6;
     }
 
     .dashboard button {
@@ -111,14 +109,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="Images/D8FD2866-41AB-4195-859B-79A73998A596.PNG" 
-     style="width: 200px; height: auto; display: block; margin-left: 0; padding-left: 0;" 
-     class="logo-left" 
-     alt="NewTune Studio Logo">
-    <h1>NewTune Studio</h1>
-  </header>
 
+  <!-- Navigation over background -->
   <nav>
     <a href="index.html">Home</a>
     <a href="book.html">Pricing & Availability</a>
@@ -127,11 +119,15 @@
     <a href="about.html">About Me</a>
   </nav>
 
+  <!-- Hero / Dashboard Section -->
   <section class="dashboard">
-    <h2>Welcome to NewTune Studio</h2>
-    <p>At NewTune Studio, I don’t just teach guitar — I turn your playing into a production.
-    Whether you're a beginner or rediscovering your passion, my lessons focus on the music you love. I guide you step-by-step, then help transform your progress into a recorded performance or even an original track.</p>
-    <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfGidOcMsPe0PEVzAs08lQcvsFhnG1pIZqPmuJtkkQa67L2Rg/viewform?usp=dialog', '_blank')">Start Your Journey</button>
+    <img src="Images/D8FD2866-41AB-4195-859B-79A73998A596.PNG" alt="NewTune Studio Logo">
+    <div class="dashboard-content">
+      <h2>Welcome to NewTune Studio</h2>
+      <p>At NewTune Studio, I don’t just teach guitar — I turn your playing into a production.
+      Whether you're a beginner or rediscovering your passion, my lessons focus on the music you love. I guide you step-by-step, then help transform your progress into a recorded performance or even an original track.</p>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfGidOcMsPe0PEVzAs08lQcvsFhnG1pIZqPmuJtkkQa67L2Rg/viewform?usp=dialog', '_blank')">Start Your Journey</button>
+    </div>
   </section>
 
   <footer>
