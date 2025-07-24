@@ -1,1 +1,127 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>About Me - NewTune Studio</title> <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet"> <style> * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Cinzel', serif; background: linear-gradient(145deg, #0d0d0d, #1a1a1a); color: #f5f5f5; } header { background-color: #0e0e0e; padding: 30px 20px; text-align: center; border-bottom: 3px solid #94794b; } header h1 { font-size: 3rem; color: #e0c097; letter-spacing: 2px; } nav { background-color: #121212; display: flex; justify-content: center; gap: 30px; padding: 15px 0; border-bottom: 1px solid #333; } nav a { color: #e0c097; text-decoration: none; font-weight: 700; font-size: 1rem; } nav a:hover { color: #ffffff; } .about-section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; } .about-text { flex: 1 1 55%; padding-right: 30px; } .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: #e0c097; } .about-text p { font-size: 1.1rem; line-height: 1.7; color: #ddd; margin-bottom: 20px; } .image-placeholder { flex: 1 1 40%; height: 300px; border: 2px dashed #94794b; display: flex; align-items: center; justify-content: center; color: #94794b; font-size: 1rem; margin-top: 20px; } footer { background-color: #0e0e0e; color: #999; text-align: center; padding: 20px 0; font-size: 0.9rem; border-top: 1px solid #333; } </style> </head> <body> <header> <h1>NewTune Studio</h1> </header> <nav> <a href="index.html">Home</a> <a href="book.html">Pricing & Availability</a> <a href="lesson.html">Ogden Lessons</a> <a href="music.html">My Music</a> <a href="about.html">About Me</a> </nav> <section class="about-section"> <div class="about-text"> <h2>About Me</h2> <p>Hi, I'm Briggs Newton — a 25-year-old musician, teacher, and music producer from Ogden, Utah. My musical journey started when I taught myself piano at the age of 10. At 17, I fell in love with the guitar and taught myself how to play, with a special focus on acoustic fingerpicking. At 22, I expanded my skills and taught myself how to produce music.</p> <p>Teaching and music are my two biggest passions in life. I’ve spent my entire life in Utah, except for two years I spent living in Africa where I had the opportunity to serve others and learn both Portuguese and Spanish. That experience taught me the value of connection and self-expression — lessons I now bring into my music and my teaching.</p> <p>I draw inspiration from a variety of genres, especially alternative, indie, pop, and singer-songwriter. My goal is to help each student discover their own sound and express it with confidence — whether that's through learning guitar or producing their first track.</p> </div> <div class="about-image"> <img src="Images/IMG_6960 2.jpg" style="width: 200px; height: auto; alt="Briggs Newton" /> </div> </section> <footer> &copy; 2025 NewTune Studio. All Rights Reserved. </footer> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NewTune Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cinzel', serif;
+      background: url('https://images.unsplash.com/photo-1607990283143-e81e7f50f98f?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      color: #f5f5f5;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: relative;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+    }
+
+    .logo-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 120px;
+      width: auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #e0c097;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #444;
+    }
+
+    nav a {
+      color: #e0c097;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      color: #f5f5f5;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      color: #ddd;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #aaa;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Images/D8FD2866-41AB-4195-859B-79A73998A596.PNG" alt="Logo" class="logo-left">
+    <h1>NewTune Studio</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="book.html">Pricing & Availability</a>
+    <a href="lesson.html">Ogden Lessons</a>
+    <a href="music.html">My Music</a>
+    <a href="about.html">About Me</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Welcome to NewTune Studio</h2>
+    <p>Explore personalized guitar lessons that go beyond technique — transforming your playing into polished productions.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 NewTune Studio. All rights reserved.
+  </footer>
+</body>
+</html>
