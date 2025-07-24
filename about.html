@@ -53,18 +53,26 @@
 
     .about-section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .about-section h2 {
+    .about-text {
+      flex: 1 1 55%;
+      padding-right: 30px;
+    }
+
+    .about-text h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: #e0c097;
     }
 
-    .about-section p {
+    .about-text p {
       font-size: 1.1rem;
       line-height: 1.7;
       color: #ddd;
@@ -72,15 +80,15 @@
     }
 
     .image-placeholder {
-      margin: 40px auto;
+      flex: 1 1 40%;
       height: 300px;
-      width: 80%;
       border: 2px dashed #94794b;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #94794b;
       font-size: 1rem;
+      margin-top: 20px;
     }
 
     footer {
@@ -100,20 +108,21 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="book.html">Book Now</a>
+    <a href="book.html">Pricing & Availability</a>
     <a href="ogden.html">Ogden Lessons</a>
     <a href="music.html">Music</a>
     <a href="about.html">About Me</a>
   </nav>
 
   <section class="about-section">
-    <h2>About Me</h2>
-    <p>Hi, I'm Briggs Newton, a 25-year-old musician, teacher, and music producer based in Ogden, Utah. My musical journey began at the age of 10 when I taught myself how to play the piano. At 17, I picked up the guitar and became passionate about acoustic fingerpicking. By 22, I dove into the world of music production, and I’ve been creating ever since.</p>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hi, I'm Briggs Newton — a 25-year-old musician, teacher, and music producer from Ogden, Utah. My musical journey started when I taught myself piano at the age of 10. At 17, I fell in love with the guitar and taught myself how to play, with a special focus on acoustic fingerpicking. At 22, I expanded my skills and taught myself how to produce music.</p>
 
-    <p>Music and teaching are my two greatest passions. I love helping people of all ages develop their skills and discover their sound. I’ve lived in Utah my whole life, with the exception of two years I spent living in Africa, serving others and immersing myself in new cultures. During that time, I learned to speak Portuguese and Spanish, experiences that broadened my perspective and deepened my love for connection through art.</p>
+      <p>Teaching and music are my two biggest passions in life. I’ve spent my entire life in Utah, except for two years I spent living in Africa where I had the opportunity to serve others and learn both Portuguese and Spanish. That experience taught me the value of connection and self-expression — lessons I now bring into my music and my teaching.</p>
 
-    <p>My musical influences range from indie and alternative to pop and singer-songwriter. My heart is in the acoustic guitar, and fingerstyle playing is my specialty. I bring a unique and creative approach to teaching and producing music, with a goal to help every student find their voice and turn their playing into something truly lasting.</p>
-
+      <p>I draw inspiration from a variety of genres, especially alternative, indie, pop, and singer-songwriter. My goal is to help each student discover their own sound and express it with confidence — whether that's through learning guitar or producing their first track.</p>
+    </div>
     <div class="image-placeholder">Insert Your Photo Here</div>
   </section>
 
