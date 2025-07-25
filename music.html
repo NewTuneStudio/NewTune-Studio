@@ -71,17 +71,16 @@
       margin-bottom: 40px;
     }
 
-    .video-container {
-      display: flex;
-      flex-direction: column;
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 30px;
-      align-items: center;
+      align-items: start;
     }
 
     iframe {
       width: 100%;
-      max-width: 720px;
-      height: 405px;
+      height: 315px;
       border: none;
       border-radius: 10px;
     }
@@ -113,19 +112,16 @@
     <h2>Check Out My Music</h2>
     <p>I have two original songs out on all major platforms — “Slow” and “Bleeding Like You” — written, performed, and produced by me. They reflect the same passion and process I bring to every lesson at NewTune Studio. Whether you're learning your first chords or recording your own track, my goal is to help you turn your sound into something real. More music coming soon!</p>
 
-    <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/Kw5cdvpLvxo" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/B3ws7bzy-Ac" allowfullscreen></iframe>
-</div>
-
-<h3 style="margin-top: 50px; color: #e0c097;">Example</h3>
-<p style="font-size: 1.1rem; color: #ccc; margin-bottom: 30px;">
-  Let's have some fun and turn your playing into a cool beat!
-</p>
-
-<div class="video-container">
-  <iframe src="https://www.youtube.com/embed/faUE4DiquIA" allowfullscreen></iframe>
-</div>
+    <div class="video-grid">
+      <div>
+        <iframe src="https://www.youtube.com/embed/Kw5cdvpLvxo" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/B3ws7bzy-Ac" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/faUE4DiquIA" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/BnBGESGQJ0I" allowfullscreen></iframe>
+      </div>
+    </div>
 
   </section>
 
