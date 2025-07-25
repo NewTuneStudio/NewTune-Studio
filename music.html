@@ -53,29 +53,22 @@
 
     .music-section {
       padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      text-align: center;
-    }
-
-    .music-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #e0c097;
-    }
-
-    .music-section p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #ccc;
-      margin-bottom: 40px;
     }
 
     .video-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 60px;
       align-items: start;
+      margin-top: 40px;
+    }
+
+    .video-column {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     iframe {
@@ -83,6 +76,16 @@
       height: 315px;
       border: none;
       border-radius: 10px;
+    }
+
+    .left-header, .right-header {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .right-header {
+      text-align: right;
     }
 
     footer {
@@ -109,20 +112,20 @@
   </nav>
 
   <section class="music-section">
-    <h2>Check Out My Music</h2>
-    <p>I have two original songs out on all major platforms — “Slow” and “Bleeding Like You” — written, performed, and produced by me. They reflect the same passion and process I bring to every lesson at NewTune Studio. Whether you're learning your first chords or recording your own track, my goal is to help you turn your sound into something real. More music coming soon!</p>
-
     <div class="video-grid">
-      <div>
+      <div class="video-column">
+        <h2>Check Out My Music</h2>
+        <p class="left-header">I have two original songs out on all major platforms — “Slow” and “Bleeding Like You” — written, performed, and produced by me. They reflect the same passion and process I bring to every lesson at NewTune Studio. Whether you're learning your first chords or recording your own track, my goal is to help you turn your sound into something real. More music coming soon!</p>
         <iframe src="https://www.youtube.com/embed/Kw5cdvpLvxo" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/B3ws7bzy-Ac" allowfullscreen></iframe>
       </div>
-      <div>
+      <div class="video-column">
+        <h3 class="right-header">Example</h3>
+        <p class="right-header">Let's have some fun and turn your playing into a cool beat!</p>
         <iframe src="https://www.youtube.com/embed/faUE4DiquIA" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/BnBGESGQJ0I" allowfullscreen></iframe>
       </div>
     </div>
-
   </section>
 
   <footer>
