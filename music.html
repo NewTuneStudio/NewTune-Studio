@@ -60,15 +60,17 @@
     .video-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 100px;
       align-items: start;
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     .video-column {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      align-items: center;
+      text-align: center;
     }
 
     iframe {
@@ -79,13 +81,14 @@
     }
 
     .left-header, .right-header {
-      margin-bottom: 20px;
       font-size: 1.2rem;
       color: #ccc;
+      max-width: 90%;
     }
 
-    .right-header {
-      text-align: right;
+    h2, h3 {
+      color: #e0c097;
+      margin-bottom: 10px;
     }
 
     footer {
@@ -115,13 +118,13 @@
     <div class="video-grid">
       <div class="video-column">
         <h2>Check Out My Music</h2>
-        <p class="left-header">I have two original songs out on all major platforms — “Slow” and “Bleeding Like You” — written, performed, and produced by me. They reflect the same passion and process I bring to every lesson at NewTune Studio. Whether you're learning your first chords or recording your own track, my goal is to help you turn your sound into something real. More music coming soon!</p>
+        <p class="left-header">Listen to my original tracks “Slow” and “Bleeding Like You.” These songs reflect the passion and creativity I bring to every student and recording. More music coming soon!</p>
         <iframe src="https://www.youtube.com/embed/Kw5cdvpLvxo" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/B3ws7bzy-Ac" allowfullscreen></iframe>
       </div>
       <div class="video-column">
-        <h3 class="right-header">Example</h3>
-        <p class="right-header">Let's have some fun and turn your playing into a cool beat!</p>
+        <h3>Lesson Example</h3>
+        <p class="right-header">See how we turn your practice into a real production — from chords to custom beat.</p>
         <iframe src="https://www.youtube.com/embed/faUE4DiquIA" allowfullscreen></iframe>
         <iframe src="https://www.youtube.com/embed/BnBGESGQJ0I" allowfullscreen></iframe>
       </div>
